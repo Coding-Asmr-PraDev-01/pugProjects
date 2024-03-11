@@ -1,0 +1,183 @@
+html 
+  head 
+    meta(name="viewport" content="width=device-width, inital-scale=1.0")
+    title Property Housing Website Design 
+    link(rel="stylesheet" href="./style.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" )
+  body(data-theme='dark') 
+     block content
+     include header
+     include _mixins
+
+     div.mainBanner
+       div.mainBanner__leftBx
+         h3.text Find and explore your <br/> dream property at <br/> affordable prices. 
+       
+       div.mainBanner__rightBx
+         p Ready to live apartment in a premium location with outstanding, extraordinarily beautiful class things complete facilities and affordable prices.
+         button.btn.btn--primary-filled Get started
+      
+     div.mainImgBx
+       div.imgBx
+         img(src="./Assets/imgs/main-house-img.jpg" alt="main img")
+       div.specsBx
+         +specsBox("48K+", "Property Options", "specsBx")
+         +specsBox("120K+", "Capital Raised", "specsBx")
+         +specsBox("360K+", "Happy Customers", "specsBx")
+
+     div.specialCard
+       +specialCard(
+        [
+          {
+            heading: "The Secret Behind <br/> Our  Success Thebuild",
+            userImgs: ["./Assets/imgs/user-1.jpg", "./Assets/imgs/user-2.jpg", "./Assets/imgs/user-3.jpg", "./Assets/imgs/user-4.jpg", "./Assets/imgs/user-5.jpg"],
+            numbersBx: [{
+              class: "numberBx",
+              h4: "25",
+              p: "Team Mentors"
+            }, 
+            {
+              class: "numberBx",
+              h4: "32+",
+              p: "Blogs about us"
+            }]
+          },
+          {
+            heading: "Popular & Luxury <br/> Listings on Thebuild",
+            userImgs: ["./Assets/imgs/user-1.jpg", "./Assets/imgs/user-2.jpg", "./Assets/imgs/user-3.jpg", "./Assets/imgs/user-4.jpg", "./Assets/imgs/user-5.jpg"],
+            numbersBx: [{
+              class: "numberBx",
+              h4: "35",
+              p: "Team Mentors"
+            }, 
+            {
+              class: "numberBx",
+              h4: "74+",
+              p: "Luxury Flats"
+            }]
+          }
+        ], 
+        "specialCard"
+       ) 
+
+     div.textBx
+       h1.text We are your partner in <br /> building your dream house
+       p Our platform is very efficient in creating your desired house projects which are totally customization proof with added integrity to your designs. We are always there for you even after we done with your project, thanks to our Maintaince programmes. 
+
+     div.houseShowCase
+       +houseShowCase(
+        [
+          {
+            img: "./Assets/imgs/house-1.jpg",
+            heading: "Boston, Massachusetta 192",
+            ptext: "Best in class for classic",
+            year: 2023  
+          },
+          {
+            img: "./Assets/imgs/house-2.jpg",
+            heading: "Miami Bleach, Florida 542",
+            ptext: "For those who love furtune",
+            year: 2022 
+          },
+          {
+            img: "./Assets/imgs/house-3.jpg",
+            heading: "Norton, California 311",
+            ptext: "Those who can stand it",
+            year: 2023  
+          },
+          {
+            img: "./Assets/imgs/house-4.jpg",
+            heading: "Dubai, Qatar panda 292",
+            ptext: "Sheikh lifestyle is way",
+            year: 2011  
+          },
+          {
+            img: "./Assets/imgs/house-5.jpg",
+            heading: "India, Delhi ",
+            ptext: "Best in world",
+            year: 2023  
+          },
+          {
+            img: "./Assets/imgs/house-6.jpg",
+            heading: "Norway, Goat 1132",
+            ptext: "Sun never sets here",
+            year: 2023  
+          }
+        ], 
+        "houseShowCase"
+       )
+
+     div.singleHouseBx
+       div.singleHouseBx__leftBx
+         img(src="./Assets/imgs/house-6.jpg" alt="") 
+         div.contentBx
+           h2 See Projects 
+           p Browse through our great library of housing projects done by state of art professionals.
+           div.iconBx
+             span.arrow-icon: i.fa-solid.fa-arrow-right-long
+
+       div.singleHouseBx__rightBx 
+         .textBx 
+           .text Comfort is our top priority just for you and will do it in every step of way.
+           p We are commited to provide you the best comfort for you. Get a comfortable experience with us because we put your comfort above all to maintain the quality of our service. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           ul.tags 
+             li.tag Premium national marketing
+             li.tag Managed Vivewings
+             li.tag Free, no obligation valuations
+             li.tag Local area knowledge
+           button.btn.btn--primary-filled 
+            | See more &nbsp;
+            i.fa-solid.fa-arrow-right-long 
+            
+     div.aboutBx
+       div.textBx
+           div 
+             .text Contact our partners to discuss further about consulting or development
+             p With unrelenting passion, we help bring your vision to life and overcome any engineering and technical challenges. No matter the scale, complexity or location of the project.
+
+       div.messageBx
+         form 
+           .inputBx
+             label(for="name") 
+             span Name
+             input(type="text" placeholder="Enter your name" class="name" name="name")
+           .inputBx
+             label(for="email") 
+             span Email
+             input(type="text" placeholder="Enter your email" class="email" name="email")  
+           .inputBx 
+             label(for="message")
+             span Message
+             textarea(class="message" name="message")
+           button.btn.btn--primary-filled 
+            | Submit &nbsp;
+            i.fa-solid.fa-arrow-right-long 
+
+     footer 
+       div.footer__box
+         div.logoBx
+           h1.header__heading.main--heading Thebuild 
+         p An international real estate company that provides your properly solutions with best quality and affordable prices.
+
+       div.footer__box
+         h2 About Us 
+         ul 
+           li Company     
+           li Ledership     
+           li Careers   
+       
+       div.footer__box
+         h2 Resources
+         ul 
+           li Blog
+           li Article     
+           li Partner  
+           li Patreon 
+
+       div.footer__box
+         h2 Help Center
+         ul 
+           li FAQ
+           li Terms & Conditions     
+           li Cookie Setting
+           li Privacy Policy 

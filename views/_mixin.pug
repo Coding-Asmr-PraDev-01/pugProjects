@@ -1,0 +1,36 @@
+mixin specsBox(heading, subHeading, className)
+  div(class=`${className}__box`)
+    h4= heading 
+    span= subHeading
+  
+mixin specialCard(cardsData, className)
+  each cardData in cardsData
+    div(class=`${className}__box`)
+      div.leftBx
+        h2 !{cardData.heading}
+        div.leftBx__bottomBx
+          div.userBxs
+            each userBxImg in cardData.userImgs 
+              div.userBx
+                img(src=`${userBxImg}` alt="")
+          each numberBx in cardData.numbersBx
+            div(class=`${numberBx.class}`) 
+              h4= numberBx.h4
+              p= numberBx.p  
+        
+      div.rightBx
+        span.arrow-icon: i.fa-solid.fa-arrow-right-long
+  
+mixin houseShowCase(houseCards, className)
+  each houseCard in houseCards 
+    div(class=`${className}__box`)
+      img(src=`${houseCard.img}` alt="") 
+      div.headingBx
+        h3= houseCard.heading
+        div 
+          p= houseCard.ptext
+          b= houseCard.year
+      div.iconBx
+        span.arrow-icon: i.fa-solid.fa-arrow-right-long
+
+//-   each _ in Array.from({length: count})

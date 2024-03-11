@@ -1,0 +1,13 @@
+- const listItems = ['home', 'properties', 'buy', 'sell', 'rent']
+
+div.header
+  div.header__logo
+    h1.header__heading.main--heading Thebuild 
+  
+  nav.navbar 
+    ul.navbar__items 
+      each menu, ind in listItems
+        li: a.navbar__item(class=ind === 0 ? 'active': '')= menu.charAt(0).toUpperCase() + menu.slice(1)
+  
+  button.btn.btn--primary-outline Register
+  //- button.btn.btn--primary-filled Sign Up
